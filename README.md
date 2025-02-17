@@ -116,16 +116,6 @@ dbOps.Delete("Musteriler", 1);
 - **System.Data.SqlClient:** ADO.NET ile SQL Server bağlantısı için gereklidir.
 - **System.Windows.Forms:** Mesaj kutuları için kullanılmıştır (isteğe bağlı olarak çıkarılabilir).
 
----
-
-## ⚠️ Güvenlik Notu
-Bu sınıf yapısı, SQL Injection saldırılarına karşı hassas olabilir. Özellikle tablo adlarını dinamik olarak SQL sorgularında kullanırken dikkatli olunmalıdır. Daha güvenli bir yapı için aşağıdaki önlemler alınabilir:
-- **Tablo Adlarını Sabitleyin:** Kullanıcıdan alınan tablo adlarını doğrudan sorguda kullanmak yerine sabit değişkenler olarak tanımlayın.
-- **Parametreli Sorgular:** Değerleri sorguya eklerken `AddWithValue` yerine `SqlParameter` kullanarak daha güvenli hale getirin.
-- **ORM Kullanımı:** Daha kapsamlı projelerde Entity Framework veya Dapper gibi ORM araçlarını değerlendirin.
-
----
-
 ## 📌 Sınıf Yapısı
 `DatabaseOperations` sınıfı, ADO.NET'in temel bileşenlerini kullanarak şu işlemleri gerçekleştirir:
 - **SqlConnection:** Veritabanı bağlantısı için kullanılır.
@@ -133,49 +123,6 @@ Bu sınıf yapısı, SQL Injection saldırılarına karşı hassas olabilir. Öz
 - **SqlCommand:** Ekleme, güncelleme ve silme işlemleri için kullanılır.
 - **MessageBox:** İşlemler sonrası kullanıcıya bilgi vermek amacıyla kullanılmıştır.
 
----
-
-## 🌐 Proje Yapısı
-
-```
-📁 ProjeAdi
- ┣ 📂 Properties
- ┣ 📂 bin
- ┣ 📂 obj
- ┣ 📂 Database
- ┃ ┗ 📜 DatabaseOperations.cs
- ┗ 📜 Program.cs
-```
-
----
-
-## 🔄 Katkıda Bulunma
-Katkıda bulunmak isterseniz:
-1. Bu projeyi fork'layın.
-2. Yeni bir dal (branch) oluşturun: `git checkout -b yeni-ozellik`
-3. Değişikliklerinizi yapın ve commitleyin: `git commit -m 'Yeni özellik eklendi'`
-4. Dalınızı pushlayın: `git push origin yeni-ozellik`
-5. Bir pull request açın.
-
----
-
-## 📄 Lisans
-Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına göz atabilirsiniz.
-
----
-
-## 📞 İletişim ve Destek
-Herhangi bir sorun veya öneri için iletişime geçmekten çekinmeyin:
-- **Email:** example@example.com
-- **GitHub Issues:** [Proje Sorunları](https://github.com/kullaniciadi/projeadi/issues)
-
----
-
-## 💡 İpuçları ve Tavsiyeler
-- **Connection String Güvenliği:** Connection string bilgilerinizi `app.config` veya `web.config` dosyasında saklamak daha güvenlidir.
-- **Hata Yönetimi:** `try-catch` bloklarını daha kapsamlı kullanarak hata mesajlarını loglayabilirsiniz.
-
----
 
 ## 📌 Notlar
 - Bu sınıf yapısı **.NET Framework** projelerinde kullanılmak üzere tasarlanmıştır.
