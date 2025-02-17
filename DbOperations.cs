@@ -5,7 +5,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace TeknikServisProjesi
+namespace DatabaseHelper
+
 {
     public class DatabaseOperations
     {
